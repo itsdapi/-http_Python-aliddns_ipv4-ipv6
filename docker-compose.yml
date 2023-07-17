@@ -6,9 +6,9 @@ services:
     ports:
       - "5002:5000"
     environment:
-      "ACCESSKEYID": "LTAI5t5b3ShutnEYj2Du3vqT"
-      "ACCESSSECRET": "mwYFoabi8OQAL1UrA11uIxJ6yArq10"
-      "DOMAIN": "catslab.cn"
+      "ACCESSKEYID": ""
+      "ACCESSSECRET": ""
+      "DOMAIN": ""
       "NAME_IPV4": www
       "NAME_IPV6": www
 
