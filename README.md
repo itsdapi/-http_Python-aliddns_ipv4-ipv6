@@ -8,16 +8,15 @@
 用写好的Docker-compose就能从源码编译并启动 或者从Docker-hub拉取
 
 ```shell
-docker pull itsdapi/http-aliddns-server:latest
+docker run --name=http-aliddns-server -p 5002:5000 -e ACCESSKEYID=key123 -e ACCESSSECRET=secret123 itsdapi/http-aliddns-server:latest
 ```
 
 然后通过GET请求访问
 ```
-http://your.ip:5000/updateV4?ip=1.1.1.1
+http://your.ip:5000/updateV4?ip=1.1.1.1&domain=example.org&record=abc
 ```
 
-将your.ip替换成服务器ip 有updateV4, updateV6可选 然后直接输入ip地址即可 <br>
->我突然发现其实可以把域名啥的都放上来 先加到TODO罢^^
+将your.ip替换成服务器ip 有updateV4, updateV6可选 然后domain填自己域名，record就是域名最前面的那个
 
 ## 环境变量
 
@@ -25,9 +24,6 @@ http://your.ip:5000/updateV4?ip=1.1.1.1
 |--------------|---------|
 | ACCESSKEYID  | 阿里云访问id |
 | ACCESSSECRET | 阿里云访问密钥 |
-| DOMAIN       | 目标域名    |
-| NAME_IPV4    | ipv4前缀  |
-| NAME_IPV6    | ipv6前缀  |
 
 
 
