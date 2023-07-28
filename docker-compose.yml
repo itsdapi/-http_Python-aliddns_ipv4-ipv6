@@ -8,8 +8,5 @@ services:
     environment:
       "ACCESSKEYID": ""
       "ACCESSSECRET": ""
-      "DOMAIN": ""
-      "NAME_IPV4": www
-      "NAME_IPV6": www
 
     container_name: "aliddns-http-server"
