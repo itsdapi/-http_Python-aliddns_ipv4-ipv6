@@ -9,4 +9,4 @@ services:
       "ACCESSKEYID": ""
       "ACCESSSECRET": ""
 
-    container_name: "aliddns-http-server"
+    container_name: "http-aliddns-server"
